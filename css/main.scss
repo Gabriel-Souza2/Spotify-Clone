@@ -91,11 +91,6 @@ header {
             font-size: 1.5rem;
             font-weight: 400;
         }
-        
-        .btn-group {
-            display: flex;
-            gap: 0.5rem;
-        }
 
         p {
             font-size: 0.75rem;
@@ -107,17 +102,15 @@ header {
     
 }
 
-.btn-start {
+@mixin  btn-base {
     padding: 1rem 2rem;
-    background-color: #191414;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     font-size: 0.875rem;
+    font-weight: 900;
+    height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    text-align: center;
 
     border-top-left-radius: 999px;
     border-bottom-left-radius: 999px;
@@ -125,25 +118,34 @@ header {
     border-top-right-radius: 999px;
     border-bottom-right-radius: 999px;
 
+    display: inline-block;
+
+    position: relative;
+
+    &:hover {
+        transform: scale(105%)
+    }
+
+    &:active {
+        outline: 3px solid #0B0909;
+        outline-offset: 3px;
+    }
 }
 
+.btn-start {
+    @include btn-base;
+    background-color: #191414;
+    margin-right: 0.5rem;
+
+    &:hover {
+        background-color: #0B0909;
+    }
+}
+
+
 .btn-see-plans {
-    padding: 1rem 2rem;
+    @include btn-base;
     background-color: transparent;
     border: 2px solid #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    border-top-left-radius: 999px;
-    border-bottom-left-radius: 999px;
-
-    border-top-right-radius: 999px;
-    border-bottom-right-radius: 999px;
+    
 }
