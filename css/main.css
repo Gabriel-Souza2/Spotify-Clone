@@ -1,3 +1,55 @@
-body {
-  background-color: black;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, input, textarea, button {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Robot", "sans";
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  background-color: #000;
+  width: 100%;
+}
+
+.header-wrapper {
+  max-width: 74rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.header-wrapper img {
+  width: 132px;
+  height: 42px;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  list-style: none;
+  gap: 2rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.menu ul li:nth-child(4n) {
+  width: 1px;
+  height: auto;
+  background-color: #fff;
+}
+.menu ul li a:hover {
+  color: #57D761;
 }/*# sourceMappingURL=main.css.map */
