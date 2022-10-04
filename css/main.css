@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-header {
+.header-menu {
   background-color: #000;
   width: 100%;
 }
@@ -134,4 +134,44 @@ header {
 .btn-see-plans:active {
   outline: 3px solid #0B0909;
   outline-offset: 3px;
+}
+
+.premium {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.premium h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 5rem;
+}
+.premium ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  list-style: none;
+}
+.premium ul li {
+  text-align: center;
+}
+.premium ul li img {
+  width: 8.875rem;
+  height: 8.875rem;
+  display: block;
+  margin: 0 auto;
+}
+.premium ul li div {
+  margin-top: 3rem;
+  color: #000;
+  font-weight: 500;
+}
+.premium ul li div > p:first-child {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=main.css.map */

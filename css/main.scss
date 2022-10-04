@@ -16,7 +16,7 @@ a {
     text-decoration: none;
 }
 
-header {
+.header-menu {
     background-color: #000;
     width: 100%;
 }
@@ -148,4 +148,51 @@ header {
     background-color: transparent;
     border: 2px solid #fff;
     
+}
+
+.premium {
+    @include max-width-wrapper; 
+    padding: 6rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 5rem;
+    }
+
+    ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        
+        list-style: none;
+
+        li {
+            text-align: center;
+            
+            img {
+                width: 8.875rem;
+                height: 8.875rem;
+                display: block;
+                margin: 0 auto;
+            }
+
+            div {
+                margin-top: 3rem;
+                color: #000;
+                font-weight: 500;
+
+                & > p:first-child {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
 }
