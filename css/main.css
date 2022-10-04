@@ -11,6 +11,10 @@ body, input, textarea, button {
   font-weight: 400;
 }
 
+h1, h2 {
+  letter-spacing: -1px;
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -139,7 +143,7 @@ a {
 .premium {
   max-width: 74rem;
   margin: 0 auto;
-  padding: 6rem 2rem;
+  padding: 6rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,4 +178,130 @@ a {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.plans {
+  background-color: #EFEFEF;
+}
+.plans article {
+  max-width: 74rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem 1rem;
+}
+.plans article header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.plans article header h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.plans article header h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.card-plans {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+}
+
+.card-header {
+  background-color: #fff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.card-header p {
+  line-height: 22px;
+  margin-bottom: 0.3rem;
+  font-size: 0.875rem;
+}
+
+.mounth-free {
+  display: block;
+  color: #fff;
+  background-color: #0F74EA;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 8px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.payment {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  border: 1px solid #0F74EA;
+  border-radius: 4px;
+  color: #0F74EA;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin-bottom: 0.6rem;
+}
+
+.card-content {
+  background-color: #fff;
+  box-shadow: 0px -9px 0px rgb(255, 255, 255), 0px 0px 8px rgba(0, 0, 0, 0.3);
+  padding: 0 1rem;
+}
+.card-content hr {
+  border-color: #CCCCCC;
+}
+.card-content ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+.card-content ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+.card-content ul li i {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.card-btn {
+  background-color: #fff;
+  box-shadow: 0px -9px 0px rgb(255, 255, 255), 0px 0px 8px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+.card-btn .btn-start {
+  width: 100%;
+}
+
+.card-footer {
+  background-color: #fff;
+  box-shadow: 0px -9px 0px rgb(255, 255, 255), 0px 0px 8px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.card-footer p {
+  padding: 0 1rem 1rem;
+  color: rgb(83, 83, 83);
+  font-size: 0.75rem;
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */
