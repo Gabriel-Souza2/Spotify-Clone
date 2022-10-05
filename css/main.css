@@ -304,4 +304,67 @@ a {
   color: rgb(83, 83, 83);
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+.footer {
+  background-color: #000;
+}
+
+.nav-footer {
+  max-width: 74rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  padding: 4rem 1rem;
+}
+.nav-footer .logo-wrapper {
+  padding: 0 3rem;
+}
+.nav-footer .logo-wrapper img {
+  width: 143px;
+  height: auto;
+}
+.nav-footer ul li a {
+  color: #fff;
+}
+.nav-footer ul li a:hover {
+  color: #57D761;
+}
+.nav-footer .links {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-footer .links p {
+  color: #909395;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.nav-footer .links ul li {
+  margin-bottom: 1.5rem;
+}
+.nav-footer .social {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: end;
+}
+.nav-footer .social ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.nav-footer .social ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.375rem;
+  height: 3.375rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #222326;
+  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */
