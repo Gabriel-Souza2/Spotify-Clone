@@ -1,76 +1,8 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body, input, textarea, button {
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-}
-
-h1, h2 {
-    letter-spacing: -1px;
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.header-menu {
-    background-color: #000;
-    width: 100%;
-}
-
-@mixin max-width-wrapper {
-    max-width: 74rem;
-    margin: 0 auto;
-}
-.header-wrapper {
-    @include max-width-wrapper; 
-    max-width: 74rem;
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-
-    img {
-        width: 132px;
-        height: 42px;
-    }
-}
-
-.menu {
-
-    ul{
-        display: flex;
-        flex-direction: row;
-        color: #fff;
-        list-style: none;
-        gap: 2rem;
-        font-weight: 700;
-       
-
-        li:nth-child(4n) {
-            width: 1px;
-            height: auto;
-            background-color: #fff;
-        }
-
-        li a:hover {
-            color: #57D761;
-        }
-    }
-
-
-}
+@import "reset";
+@import "mixins";
+@import "menu";
+@import "cards-plans";
+@import "footer";
 
 .campaign {
     background-color: #1E75DE;
@@ -104,36 +36,6 @@ a {
     }
 
     
-}
-
-@mixin  btn-base {
-    padding: 1rem 2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    font-weight: 900;
-    height: 100%;
-
-    text-align: center;
-
-    border-top-left-radius: 999px;
-    border-bottom-left-radius: 999px;
-
-    border-top-right-radius: 999px;
-    border-bottom-right-radius: 999px;
-
-    display: inline-block;
-
-    position: relative;
-
-    &:hover {
-        transform: scale(105%)
-    }
-
-    &:active {
-        outline: 3px solid #0B0909;
-        outline-offset: 3px;
-    }
 }
 
 .btn-start {
@@ -177,25 +79,25 @@ a {
         list-style: none;
 
         li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3rem;
             text-align: center;
-            
+            color: #000;
+            font-weight: 500;
+
             img {
+
                 width: 8.875rem;
                 height: 8.875rem;
-                display: block;
-                margin: 0 auto;
             }
 
-            div {
-                margin-top: 3rem;
-                color: #000;
-                font-weight: 500;
-
-                & > p:first-child {
-                    font-size: 1.1rem;
-                    font-weight: bold;
-                    margin-bottom: 1rem;
-                }
+            div p:first-child {
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -240,182 +142,44 @@ a {
     column-gap: 0.8rem;
 }
 
-.card-header {
-    background-color: #fff;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
 
-    h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-    }
-
-    p {
-        line-height: 22px;
-        margin-bottom: 0.3rem;
-        font-size: 0.875rem;
-    }
-}
-
-.mounth-free {
-    display: block;
-    color: #fff;
-    background-color: #0F74EA;
-
-    width: fit-content;
-    padding: 4px 8px;
-    font-size: 0.875rem;
-    font-weight: bold;
-
-    border-radius: 4px;
-
-
-    margin-bottom: 0.6rem;
-}
-
-.payment {
-    display: block;
-    width: fit-content;
-    background-color: transparent;
-    border: 1px solid #0F74EA;
-    border-radius: 4px;
-    color: #0F74EA;
-
-    font-size: 0.875rem;
-    font-weight: bold;
-    padding: 4px 8px;
-    margin-bottom: 0.6rem;
-}
-
-.card-content {
-    background-color: #fff;
-    box-shadow: 0px -9px 0px rgb(255,255, 255), 0px 0px 8px rgba(0, 0, 0, 0.3);
-    padding: 0 1rem;
-    hr {
-        border-color: #CCCCCC;
-    }
-
-    ul {
-        list-style: none;
-        margin-top: 1rem;
-
-        
+@media (max-width: 1024px) {
+    .premium ul {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 5rem;
 
         li {
-            margin-bottom: 0.5rem;
-            display: flex;
-            i {
-                font-size: 1.3rem;
-                font-weight: 600;
-                margin-right: 4px;
-            }
-        }
-    }
-}
-
-.card-btn {
-    background-color: #fff;
-    box-shadow: 0px -9px 0px rgb(255,255, 255), 0px 0px 8px rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-
-    .btn-start {
-        width: 100%;
-    }
-
-}
-
-.card-footer{
-    background-color: #fff;
-    box-shadow: 0px -9px 0px rgb(255,255, 255), 0px 0px 8px rgba(0, 0, 0, 0.3);
-
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-
-    p {
-        padding: 0 1rem 1rem;
-        color: rgb(83, 83, 83);
-        font-size: 0.75rem;
-        font-weight: 500;
-    }
-}
-
-.footer {
-    background-color: #000;
-}
-
-.nav-footer {
-    @include max-width-wrapper; 
-    display: flex;
-    flex-direction: row;
-    padding: 4rem 1rem;
-
-    .logo-wrapper {
-        padding: 0 3rem;
-        img {
-            width: 143px;
-            height: auto;
-        }
-    }
-
-
-    ul li a {
-        color: #fff;
-
-        &:hover {
-            color: #57D761;
-        }
-    }
-
-    .links {
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        p {
-            color: #909395;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        ul li {
-            margin-bottom: 1.5rem;
-        }
-    }
-
-    .social {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        align-items: end;
-        
-        ul {
-
             display: flex;
             flex-direction: row;
+            text-align: left;
             gap: 1rem;
+            justify-content: start;
 
-            li {
-            
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 3.375rem;
-                height: 3.375rem;
+            img {
+                width: 6.25rem;
+                height: auto;
+            }
+        }
 
-                font-size: 2rem;
-                font-weight: bold;
+    }
 
-                background-color: #222326;
-                border-radius: 50%;
-            } 
-        } 
+    .card-plans {
+        display: block;
 
-    
+        .card-header, .card-content, .card-btn, .card-footer {
+            width: 27.5rem;
+        }
+
+        .card-footer {
+            margin-bottom: 1.5rem;
+        }
+
+        .mounth-free, .payment {
+            display: inline-block;
+        }
+
     }
 }
+
+
