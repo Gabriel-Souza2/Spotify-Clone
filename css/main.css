@@ -71,6 +71,10 @@ a {
   display: none;
   flex-direction: column;
   gap: 0.3rem;
+  position: absolute;
+  right: 2.5rem;
+  top: 1.25rem;
+  z-index: 3;
 }
 .menu .toggle :is(.line-1, .line-2, .line-3) {
   content: " ";
@@ -90,6 +94,23 @@ a {
 }
 .menu.on .toggle .line-3 {
   transform: rotate(45deg) translateX(-5px);
+}
+.menu.on .menu-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: end;
+}
+.menu.on .menu-wrapper ul {
+  height: 100vh;
+  width: 25rem;
+  background-color: #000;
+  display: block;
 }
 
 .card-header {
