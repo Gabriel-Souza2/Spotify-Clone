@@ -110,7 +110,22 @@ a {
   height: 100vh;
   width: 25rem;
   background-color: #000;
-  display: block;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu.on .menu-wrapper ul li {
+  font-size: 2.25rem;
+}
+.menu.on .menu-wrapper ul li:nth-child(4n) {
+  width: 1.5rem;
+  height: 2px;
+  color: #fff;
+}
+.menu.on .menu-wrapper ul li:nth-child(5n), .menu.on .menu-wrapper ul li:last-child {
+  font-weight: normal;
+  font-size: 1.75rem;
+  color: #d9dadc;
 }
 
 .card-header {
