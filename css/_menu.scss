@@ -1,11 +1,12 @@
+@import "mixins";
+
 .header-menu {
     background-color: #000;
     width: 100%;
 }
 
 .header-wrapper {
-    max-width: 74rem;
-    margin: 0 auto;
+    @include max-width-wrapper; 
 
     display: flex;
     flex-direction: row;
@@ -42,5 +43,44 @@
         }
     }
 
+    .toggle {
+        width: 1.375rem;
+        background: transparent;
+        border: none;
+        height: 100%;
+        padding: 0;
 
+        display: none;
+        flex-direction: column;
+        gap: 0.3rem;
+
+        :is(.line-1, .line-2, .line-3) {
+            content: " ";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            margin: 0;
+            transition-duration: 0.2s;
+        }
+    }
+
+}
+
+.menu.on {
+    .toggle {
+        .line-1 {
+            transform: rotate(-45deg) translateX(-5px);
+        }
+
+        .line-2 {
+            display: none;
+        }
+
+        .line-3 {
+            transform: rotate(45deg) translateX(-5px);
+        }
+
+
+    }
 }

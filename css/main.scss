@@ -57,13 +57,16 @@
 }
 
 .premium {
-    @include max-width-wrapper; 
-    padding: 6rem 1rem;
+    article {
+        @include max-width-wrapper; 
+        padding: 6rem 1rem;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 
     h2 {
         font-size: 2.5rem;
@@ -144,7 +147,12 @@
 
 
 @media (max-width: 1024px) {
-    .premium ul {
+    .header-wrapper, .campaign article, .premium article, .plans article, .nav-footer {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .premium article  ul {
         display: grid;
         grid-template-columns: repeat(2, auto);
         gap: 5rem;
@@ -178,8 +186,59 @@
         .mounth-free, .payment {
             display: inline-block;
         }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .header-wrapper {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        img {
+            width: 5.5rem;
+            height: auto;
+        }
+
+        nav{
+
+            ul {
+                display: none;
+            }
+
+            .toggle {
+                display: flex;
+            }
+        }
 
     }
-}
+    .nav-footer {
+        display: flex;
+        flex-direction: column;
+
+        .logo-wrapper {
+            padding: 0;
+            margin-bottom: 5rem;
+
+            img {
+                width: 5.5rem;
+                height: auto;
+            }
+        }
+
+        .links {
+            width: 100%;
+        }
+
+        .social {
+            margin-top: 5rem;
+            align-items: start
+        }
+    
+    }
+
+
+
+} 
 
 
