@@ -287,17 +287,16 @@ a {
 
 .campaign {
   background-color: #1E75DE;
-  height: 23rem;
 }
 .campaign article {
   max-width: 74rem;
   margin: 0 auto;
   padding-right: 1rem;
   padding-left: 1rem;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
 }
 .campaign article h1 {
   margin-top: 5rem;
@@ -381,6 +380,7 @@ a {
 }
 .premium h2 {
   font-size: 2.5rem;
+  text-align: center;
   font-weight: 900;
   margin-bottom: 5rem;
 }
@@ -514,5 +514,37 @@ a {
   .nav-footer .social {
     margin-top: 5rem;
     align-items: start;
+  }
+}
+@media (max-width: 475px) {
+  html {
+    font-size: 14px;
+  }
+  .header-wrapper, .campaign article, .premium article, .plans article, .nav-footer {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .menu.on .menu-wrapper ul {
+    width: 100%;
+  }
+  .campaign .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .premium article ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-header, .card-content, .card-btn, .card-footer {
+    width: 100% !important;
+  }
+  :is(.mounth-free, .payment) {
+    display: block !important;
+  }
+  .footer .nav-footer .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */
