@@ -5,6 +5,9 @@ Projeto feito para para praticar:
  - CSS
  - SASS 
  - responsividade
+ 
+Link do site original:
+[Spotify](https://www.spotify.com/br/premium/)
 
 ## Imagens do projeto
 
